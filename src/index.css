@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-maroon: #6B1D2F;
+  --color-brand-gold: #C5A059;
+  --color-brand-cream: #F4EFE6;
+  --color-brand-dark: #1A070B;
+  
+  --font-header: "Bebas Neue", sans-serif;
+  --font-body: "Lora", serif;
+
+  --animate-marquee: marquee 25s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+}
+
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 2px 2px 0px var(--color-brand-gold);
+  }
+}
+
+body {
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-dark);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+}
